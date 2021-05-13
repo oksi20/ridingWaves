@@ -1,0 +1,42 @@
+body {
+  background-image: url('https://cdn4.vectorstock.com/i/1000x1000/26/03/sea-panorama-vector-12492603.jpg');
+  background-size: cover;
+
+}
+h1, h2{
+  font-weight: bold;
+}
+.surfer {
+  width: 500px;
+  margin-top: 80px;
+  position: relative;
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.body{
+  margin-left: 700px;
+  display: flex;
+}
+
+#girl {
+  width: 150px;
+}
+#boy{
+  width:200px;
+}
+a{
+  font-size: 21px;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg) translateX(100px); }
+  100% { transform: rotate(-3deg); }
+ 
+}
+

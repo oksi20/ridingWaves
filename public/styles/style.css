@@ -1,0 +1,20 @@
+body{
+  font-family: 'Amatic SC', cursive;
+}
+.nav{
+  height:70px;
+}
+  .brand{
+  font-weight: 700;
+}
+.nav-link{
+color: rgb(17, 16, 16);
+}
+.nav-link:hover{
+  color: rgb(17, 16, 16);
+  font-weight: 700;
+}
+a{
+  font-size: 21px;
+  text-decoration: none;
+}

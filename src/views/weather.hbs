@@ -1,0 +1,204 @@
+<div class="d-inline-flex" id="lookup">
+
+  <form id="weatherForm" method="POST" action="/weather" class="d-flex d-inline">
+    <div class="form-group">
+      {{!-- <label for="location">Enter location:</label> --}}
+      <select class="form-select" aria-label="Default select example" name="location" id="location">
+        <option value='' selected>Choose location</option>
+        <option value="21.28,-157.83">Waikiki</option>
+        <option value="21.67,-158.04">North Shore</option>
+        <option value="21.33,-158.11">West Side</option>
+        <option value="19.63,-155.99">East Side</option>
+      </select>
+
+    </div>
+    <button type="submit" class="btn" id="go">Go!</button>
+  </form>
+</div>
+
+
+<div class="container days">
+  <div class="d-flex">
+    <div class="container day1 mb-3 mr-5">
+      <div class="row text-center">
+        <div class="col align-self-center" id="date">
+          <i class="fa fa-calendar-o fw-bold" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col">
+          <div class="waves">
+            <div> <i class="fa fa-clock-o" aria-hidden="true">6am</i>
+              <img src="/images/big-wave-512.webp" alt="" style="width: 30px;"><span class="spantime6"></span>
+              <i class="fa fa-thermometer-full time6" aria-hidden="true"></i>
+            </div>
+            <div> <i class="fa fa-clock-o" aria-hidden="true">9am</i>
+              <img src="/images/big-wave-512.webp" alt="" style="width: 30px;"><span class="spantime9"></span>
+              <i class="fa fa-thermometer-full time9" aria-hidden="true"></i>
+            </div>
+            <div> <i class="fa fa-clock-o" aria-hidden="true">12pm</i>
+              <img src="/images/big-wave-512.webp" alt="" style="width: 30px;"><span class="spantime12"></span>
+              <i class="fa fa-thermometer-full time12" aria-hidden="true"></i>
+            </div>
+            <div> <i class="fa fa-clock-o" aria-hidden="true">3pm</i>
+              <img src="/images/big-wave-512.webp" alt="" style="width: 30px;"><span class="spantime3pm"></span>
+              <i class="fa fa-thermometer-full time3pm" aria-hidden="true"></i>
+            </div>
+            <div> <i class="fa fa-clock-o" aria-hidden="true">6pm</i>
+              <img src="/images/big-wave-512.webp" alt="" style="width: 30px;"><span class="spantime6pm"></span>
+              <i class="fa fa-thermometer-full time6pm" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-3 align-self-center">
+          <div class="waves" id="generalInfo">
+            <div>Sunrise <span class="sunrise"></span></div>
+            <div>Sunset <span class="sunset"></span></div>
+            {{!-- <div><i class="fa fa-thermometer-empty waterF" aria-hidden="true">water temperature</i></div> --}}
+          </div>
+        </div>
+
+        <div class="col genWeather">
+        </div>
+      </div>
+    </div>
+    <div class="container day2 mb-3">
+      <div class="row text-center">
+        <div class="col align-self-center" id="date2">
+          <i class="fa fa-calendar-o fw-bold" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="row text-center">
+
+        <div class="col">
+          <div class="waves">
+
+            <div> <i class="fa fa-clock-o" aria-hidden="true">6am</i>
+              <img src="/images/big-wave-512.webp" alt="" style="width: 30px;"><span class="spantime6"></span>
+              <i class="fa fa-thermometer-full time6" aria-hidden="true"></i>
+            </div>
+            <div> <i class="fa fa-clock-o" aria-hidden="true">9am</i>
+              <img src="/images/big-wave-512.webp" alt="" style="width: 30px;"><span class="spantime9"></span>
+              <i class="fa fa-thermometer-full time9" aria-hidden="true"></i>
+            </div>
+            <div> <i class="fa fa-clock-o" aria-hidden="true">12pm</i>
+              <img src="/images/big-wave-512.webp" alt="" style="width: 30px;"><span class="spantime12"></span>
+              <i class="fa fa-thermometer-full time12" aria-hidden="true"></i>
+            </div>
+            <div> <i class="fa fa-clock-o" aria-hidden="true">3pm</i>
+              <img src="/images/big-wave-512.webp" alt="" style="width: 30px;"><span class="spantime3pm"></span>
+              <i class="fa fa-thermometer-full time3pm" aria-hidden="true"></i>
+            </div>
+            <div> <i class="fa fa-clock-o" aria-hidden="true">6pm</i>
+              <img src="/images/big-wave-512.webp" alt="" style="width: 30px;"><span class="spantime6pm"></span>
+              <i class="fa fa-thermometer-full time6pm" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col align-self-center">
+          <div class="waves" id="generalInfo2">
+            <div>Sunrise <span class="sunrise" style="font-size: 15px;"></span></div>
+            <div>Sunset <span class="sunset" style="font-size: 15px;"></span></div>
+            {{!-- <div><i class="fa fa-thermometer-empty waterF" aria-hidden="true">water temperature</i></div> --}}
+          </div>
+        </div>
+        <div class="col genWeather2 align-self-center">
+        </div>
+        <div style="width:650px d-flex">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex">
+    <div class="container day3 mb-3">
+      <div class="row text-center">
+        <div class="col align-self-center" id="date3">
+          <i class="fa fa-calendar-o fw-bold" aria-hidden="true"></i>
+        </div>
+        <div class="row text-center">
+          <div class="col">
+            <div class="waves">
+
+              <div> <i class="fa fa-clock-o" aria-hidden="true">6am</i>
+                <img src="/images/big-wave-512.webp" alt="" style="width: 30px;"><span class="spantime6"></span>
+                <i class="fa fa-thermometer-full time6" aria-hidden="true"></i>
+              </div>
+              <div> <i class="fa fa-clock-o" aria-hidden="true">9am</i>
+                <img src="/images/big-wave-512.webp" alt="" style="width: 30px;"><span class="spantime9"></span>
+                <i class="fa fa-thermometer-full time9" aria-hidden="true"></i>
+              </div>
+              <div> <i class="fa fa-clock-o" aria-hidden="true">12pm</i>
+                <img src="/images/big-wave-512.webp" alt="" style="width: 30px;"><span class="spantime12"></span>
+                <i class="fa fa-thermometer-full time12" aria-hidden="true"></i>
+              </div>
+              <div> <i class="fa fa-clock-o" aria-hidden="true">3pm</i>
+                <img src="/images/big-wave-512.webp" alt="" style="width: 30px;"><span class="spantime3pm"></span>
+                <i class="fa fa-thermometer-full time3pm" aria-hidden="true"></i>
+              </div>
+              <div> <i class="fa fa-clock-o" aria-hidden="true">6pm</i>
+                <img src="/images/big-wave-512.webp" alt="" style="width: 30px;"><span class="spantime6pm"></span>
+                <i class="fa fa-thermometer-full time6pm" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col align-self-center">
+            <div class="waves" id="generalInfo3">
+              <div>Sunrise <span class="sunrise" style="font-size: 15px;"></span></div>
+              <div>Sunset <span class="sunset" style="font-size: 15px;"></span></div>
+              {{!-- <div><i class="fa fa-thermometer-empty waterF" aria-hidden="true">water temperature</i></div>
+              --}}
+            </div>
+          </div>
+          <div class="col genWeather3 align-self-center">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container day4">
+      <div class="row text-center mb-3">
+        <div class="col align-self-center" id="date4">
+          <i class="fa fa-calendar-o fw-bold" aria-hidden="true"></i>
+        </div>
+        <div class="row text-center mb-3">
+          <div class="col">
+            <div class="waves">
+
+              <div> <i class="fa fa-clock-o" aria-hidden="true">6am</i>
+                <img src="/images/big-wave-512.webp" alt="" style="width: 30px;"><span class="spantime6"></span>
+                <i class="fa fa-thermometer-full time6" aria-hidden="true"></i>
+              </div>
+              <div> <i class="fa fa-clock-o" aria-hidden="true">9am</i>
+                <img src="/images/big-wave-512.webp" alt="" style="width: 30px;"><span class="spantime9"></span>
+                <i class="fa fa-thermometer-full time9" aria-hidden="true"></i>
+              </div>
+              <div> <i class="fa fa-clock-o" aria-hidden="true">12pm</i>
+                <img src="/images/big-wave-512.webp" alt="" style="width: 30px;"><span class="spantime12"></span>
+                <i class="fa fa-thermometer-full time12" aria-hidden="true"></i>
+              </div>
+              <div> <i class="fa fa-clock-o" aria-hidden="true">3pm</i>
+                <img src="/images/big-wave-512.webp" alt="" style="width: 30px;"><span class="spantime3pm"></span>
+                <i class="fa fa-thermometer-full time3pm" aria-hidden="true"></i>
+              </div>
+              <div> <i class="fa fa-clock-o" aria-hidden="true">6pm</i>
+                <img src="/images/big-wave-512.webp" alt="" style="width: 30px;"><span class="spantime6pm"></span>
+                <i class="fa fa-thermometer-full time6pm" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col align-self-center">
+            <div class="waves" id="generalInfo4">
+              <div>Sunrise <span class="sunrise" style="font-size: 15px;"></span></div>
+              <div>Sunset <span class="sunset" style="font-size: 15px;"></span></div>
+              {{!-- <div><i class="fa fa-thermometer-empty waterF" aria-hidden="true">water temperature</i>
+              </div> --}}
+            </div>
+          </div>
+          <div class="col genWeather4 align-self-center">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
