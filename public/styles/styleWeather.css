@@ -32,3 +32,29 @@ body {
 #go:hover{
   background-color: white;
 }
+span{
+  font-size: 15;
+  font-family:sans-serif
+}
+.sunr, .suns, .sunrise, .sunset{
+  font-size:18px;
+  font-weight: bold;
+  font-family:'Amatic SC', cursive;
+}
+
+.octopus {
+  width: 500px;
+  /* margin-top: 100px; */
+  position: relative;
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.body img {
+  width: 250px;
+}
+@keyframes rotate {
+  0% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg) translateX(-100px); }
+  100% { transform: rotate(-10deg); }
+}

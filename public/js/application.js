@@ -140,6 +140,4 @@ if (findoutWeather) {
 }
 // http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=eabbb7a46c45599d2c29281b447d190d
 
-const drawWeatherInfo = (obj) => {
 
-};

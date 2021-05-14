@@ -12,7 +12,8 @@ const cookieParser = require('cookie-parser');
 const { cookiesCleaner } = require('./src/middleware/auth');
 
 const errorMiddleware = require('./src/middleware/error');
-// const userRouter=require('./routers/userRouter')
+const userRouter = require('./src/routers/userRouter');
+const surfboardRouter = require('./src/routers/surfboardRouter');
 
 const app = express();
 
@@ -42,13 +43,11 @@ app.use((req, res, next) => {
   res.locals.userName = req.session.user?.username;
   next();
 });
-app.get('/', (req, res) => {
-  res.render('main', { main: true });
-});
+app.use('/', userRouter);
 app.get('/weather', (req, res) => {
   res.render('weather', { weather: true });
 });
-
+app.use('/surfboard', surfboardRouter);
 // errorMiddleware();
 
 const port = process.env.PORT ?? 3000;

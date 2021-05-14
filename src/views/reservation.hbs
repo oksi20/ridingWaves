@@ -1,0 +1,53 @@
+<div class="container">
+  <form action="/surfboard/reservation" method="POST" id="reservationBoard">
+    <div class="form-group">
+      <label for="name" style="font-size:18px;">Name:
+        <input id="name" class="form-control" name="name" type="text" required minlength="3" style="width:200px">
+      </label>
+    </div>
+    <div class="form-group">
+      <label for="lastname" style="font-size:18px;">Lastname:
+        <input id="lastname" class="form-control" name="lastname" type="text" required minlength="3"
+          style="width:200px">
+      </label>
+    </div>
+ <div class="form-group">
+      <label for="pickupDate" style="font-size:18px;">Date:
+        <input id="pickupDate" class="form-control" name="pickupdate" type="date" required
+          style="width:200px">
+      </label>
+    </div>
+ <div class="form-group">
+      <label for="pickupTime" style="font-size:18px;">Time:
+        <input id="pickupTime" class="form-control" name="pickuptime" type="time" required
+          style="width:200px">
+      </label>
+    </div>
+
+    <div>
+      <p class="pt-2 m-0">Do you have HI state Id?</p>
+<span id="reminder" style="font-size: 12px; display:block; margin-bottom:8px">Keep in mind you will need to show it to us once
+          picking up your board</span>
+      <input class="hi" type="radio" id="yesId" name="hiid" value="yes" >
+      <label for="yesId" class="form-check-label">yes</label>
+
+      <input type="radio" class="hi" id="noId" name="hiid" value="no" checked>
+      <label class="form-check-label" for="noId">no</label>
+    </div>
+    <select class="form-select mt-2" id="amountHours" name="amounthours" aria-label="Default select example" style="width:200px">
+      <option selected>Number of hours</option>
+      <option value="1">1 hour...........$9</option>
+      <option value="2">2 hours.......$13</option>
+      <option value="6">1/2 day........$16</option>
+      <option value="12">whole day...$20</option>
+    </select>
+    <div class="form-group pt-2">
+      <label for="cc" style="font-size:18px;"><i class="fa fa-credit-card" aria-hidden="true" style="font-size: 15px;"></i> Your credit card
+          number
+        <input id="cc" class="form-control" name="cc" type="text" required minlength="8"
+         style="width:200px">
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary px-4 mt-3">Save</button>
+  </form>
+</div>

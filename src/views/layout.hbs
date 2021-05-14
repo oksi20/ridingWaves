@@ -21,6 +21,13 @@
   {{#if main}}
   <link rel="stylesheet" href="/styles/styleMain.css">
   {{/if}}
+  {{#if surfboard}}
+  <link rel="stylesheet" href="/styles/surfboard.css">
+  <script defer src="/js/reservation.js"></script>
+  {{/if}}
+  {{!-- {{#if reservation}} --}}
+  
+  {{!-- {{/if}} --}}
   <title>ridingWaves</title>
   <script defer src="/js/application.js"></script>
 </head>
@@ -52,6 +59,7 @@
   <div class="container-fluid">
     {{{body}}}
   </div>
+  
 </body>
 
 </html>
