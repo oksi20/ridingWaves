@@ -24,20 +24,6 @@ if (findoutWeather) {
       const alertLink = `https://api.openweathermap.org/data/2.5/onecall?lat=${latLong[0]}&lon=${latLong[1]}&exclude=current,minutely,hourly&appid=eabbb7a46c45599d2c29281b447d190d`;
       const response = await fetch(alertLink);
       const result = await response.json();
-      console.log(resul.data.weather[0].date);
-      console.log(resul.data.weather[0].astronomy[0].sunrise);
-      console.log(resul.data.weather[0].astronomy[0].sunset);
-      console.log(resul.data.weather[0].hourly[0].time);
-      console.log(resul.data.weather[0].hourly[0].swellHeight_m);
-      console.log(resul.data.weather[0].hourly[0].tempC);
-      console.log(resul.data.weather[0].hourly[0].tempF);
-      console.log(resul.data.weather[0].tides[0].tide_data[1].tideTime, 'tideTime');
-      console.log(resul.data.weather[0].tides[0].tide_data[1].tide_type, 'tideType');
-      console.log(resul.data.weather[0].tides[0].tide_data[2].tideTime, 'tideTime');
-      console.log(resul.data.weather[0].tides[0].tide_data[2].tide_type, 'tideType');
-      console.log('!!!!', resul.data.weather[0].hourly);
-      // console.log(resul.data.weather[0].tides[0].tide_data[3].tideTime, 'tideTime');
-      // console.log(resul.data.weather[0].tides[0].tide_data[3].tide_type, 'tideType');
 
       document.querySelector('.day1 .fa-calendar-o').innerText = resul.data.weather[0].date;
       document.querySelector('.day1 .sunrise').innerText = resul.data.weather[0].astronomy[0].sunrise;
@@ -95,14 +81,6 @@ if (findoutWeather) {
       document.querySelector('.day4 .spantime6pm').innerText = resul.data.weather[3].hourly[6].swellHeight_m;
       document.querySelector('.day4 .time6pm').innerText = resul.data.weather[3].hourly[6].tempF;
 
-      // console.log(latLong);
-
-      console.log('alert', result);
-      // console.log('alert', result.daily[0].weather[0].description);
-      // console.log('alert', result.daily[1].weather[0].description);
-      // console.log('alert', result.daily[1].weather[0]);
-      // console.log('alert', result.daily[1]);
-      // console.log('here', result.daily[0].dt);
       const generalInfo = document.querySelector('.genWeather');
       const newIcon = document.createElement('img');
       newIcon.setAttribute('src', `http://openweathermap.org/img/wn/${result.daily[0].weather[0].icon}@2x.png`);
@@ -139,5 +117,3 @@ if (findoutWeather) {
   });
 }
 // http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=eabbb7a46c45599d2c29281b447d190d
-
-
