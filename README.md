@@ -2,8 +2,8 @@
 
  e-commerce website for renting surfboards
  
-<div><img src="imagesGH/Screen%20Shot%202021-06-19%20at%203.58.50%20PM.png" width="470"> <img src="imagesGH/Screen%20Shot%202021-06-19%20at%203.52.28%20PM.png" width="470"></div>
-<div><img src ="imagesGH/Screen%20Shot%202021-06-19%20at%203.53.13%20PM.png" width="470"> <img src="imagesGH/Screen%20Shot%202021-06-19%20at%203.57.12%20PM.png" width="470"></div>
+<div><img src="imagesGH/Screen%20Shot%202021-06-19%20at%203.58.50%20PM.png" width="460"> <img src="imagesGH/Screen%20Shot%202021-06-19%20at%203.52.28%20PM.png" width="460"></div>
+<div><img src ="imagesGH/Screen%20Shot%202021-06-19%20at%203.53.13%20PM.png" width="460"> <img src="imagesGH/Screen%20Shot%202021-06-19%20at%203.57.12%20PM.png" width="460"></div>
 
  
 
