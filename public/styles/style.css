@@ -36,7 +36,10 @@ a{
 #starfish, #starfish2, #starfish3{
   width: 200px;
 }
-#starfish5, #starfish6{
+#starfish5{
+width:150px;
+}
+ #starfish6{
   width: 180px;
 }
 #starfish3, #starfish4{

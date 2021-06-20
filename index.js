@@ -5,10 +5,12 @@ const path = require('path');
 // const hbs = require('hbs');
 const session = require('express-session');
 require('dotenv').config();
+const cookieParser = require('cookie-parser');
+const { dbConnect } = require('./src/db/config');
 const MongoStore = require('connect-mongo');
 
 const mongoUrl = process.env.DB_URL;
-const cookieParser = require('cookie-parser');
+
 const { cookiesCleaner } = require('./src/middleware/auth');
 
 const errorMiddleware = require('./src/middleware/error');
@@ -53,4 +55,5 @@ app.use('/surfboard', surfboardRouter);
 const port = process.env.PORT ?? 3000;
 app.listen(port, () => {
   console.log('Сервер запущен. Порт:', port);
+  dbConnect();
 });

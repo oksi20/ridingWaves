@@ -25,9 +25,13 @@
   <link rel="stylesheet" href="/styles/surfboard.css">
   <script defer src="/js/reservation.js"></script>
   {{/if}}
-  {{!-- {{#if reservation}} --}}
-  
-  {{!-- {{/if}} --}}
+  {{#if profile}}
+  <link rel="stylesheet" href="/styles/profile.css">
+  <script defer src="/js/profile.js"></script>
+  {{/if}}
+{{!-- {{#if rents}}
+<script defer src="/js/profile.js"></script>
+{{/if}} --}}
   <title>ridingWaves</title>
   <script defer src="/js/application.js"></script>
 </head>
@@ -39,10 +43,10 @@
     </li>
     {{#if userName}}
     <li class="nav-item">
-      <a href="/" class="nav-link"> {{userName}}</a>
+      <a href="/" class="nav-link"> Hi, {{userName}}</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="/party">Host party</a>
+      <a class="nav-link" href="/profile">Profile</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="/logout">Logout</a>

@@ -53,8 +53,9 @@ if (createRes) {
         const hiid = event.target.hiid.value;
         const cc = event.target.cc.value;
         const amounthours = event.target.amounthours.value;
+        const boardnumber = event.target.boardnumber.value;
         // console.log(name, lastname, pickupdate, pickuptime, hiid, cc, amounthours);
-        const response = await fetch('/surfboard/reservation', {
+        const resp = await fetch('/surfboard/reservation', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -65,36 +66,32 @@ if (createRes) {
             hiid,
             cc,
             amounthours,
+            boardnumber,
           }),
         });
-        const result = await response.text();
-        if (result.toLowerCase() === 'ok') {
+        const res = await resp.text();
+        if (res.toLowerCase() === 'ok') {
           const goodDiv = document.createElement('div');
 
           const savedGood = document.createElement('h2');
-          // savedGood.setAttribute('style', 'color:white');
           savedGood.innerText = 'Your reservation was created';
-          // savedGood.style.color="white";
           savedGood.style.fontWeight = 'bold';
-          console.log(savedGood);
           const savedGood2 = document.createElement('h2');
-          savedGood2.innerText = 'Thank you for choosing us!';
-          // savedGood2.style.color="white";
+          savedGood2.innerText = 'Thank you for choosing us! ';
           savedGood2.style.fontWeight = 'bold';
 
           const backBut = document.createElement('a');
           backBut.setAttribute('href', '/');
           backBut.innerText = 'Go Back';
           backBut.setAttribute('id', 'backBut');
+          
 
           goodDiv.appendChild(savedGood);
           goodDiv.appendChild(savedGood2);
           goodDiv.appendChild(backBut);
 
+
           const newDiv2 = document.querySelector('.resBoard');
-          // newDiv2.setAttribute('color', 'white');
-          // newDiv2.style.fontsize="45px"
-          // newDiv2.innerText = 'Your reservation was created. Thank you for choosing us!';
           newDiv2.removeChild(newDiv2.lastElementChild);
           newDiv2.appendChild(goodDiv);
         }

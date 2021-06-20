@@ -1,5 +1,73 @@
 <div class="container">
-  <h1>Aloha!</h1>
-  <h2>Your previous orders:</h2>
-  
+  <h1 style="text-align: center;">Make new reservation:</h1>
+  <form action="/profile" method="POST" id="profileRes" class="d-flex justify-content-around" style="width:700px; margin:auto">
+    <div>
+      <div class="form-group">
+        <label for="pickupDate" style="font-size:18px;">Date:
+          <input id="pickupDate" class="form-control" name="pickupdate" type="date" required style="width:200px">
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="pickupTime" style="font-size:18px;">Time:
+          <input id="pickupTime" class="form-control" name="pickuptime" type="time" required style="width:200px">
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="boardnumber" style="font-size:18px;">Number of boards:
+          <input id="boardnumber" class="form-control" name="boardnumber" type="number" required style="width:200px">
+        </label>
+      </div>
+    </div>
+    <div>
+
+      <div>
+        <p class=" m-0">Do you have HI state Id?</p>
+        <span id="reminder" style="font-size: 12px; display:block; margin-bottom:8px">Keep in mind you will need to show
+          it
+          to us once
+          picking up your board</span>
+        <input class="hi" type="radio" id="yesId" name="hiid" value="yes">
+        <label for="yesId" class="form-check-label">yes</label>
+        <input type="radio" class="hi" id="noId" name="hiid" value="no" checked>
+        <label class="form-check-label" for="noId">no</label>
+      </div>
+      <select class="form-select mt-2" id="amountHours" name="amounthours" aria-label="Default select example"
+        style="width:200px">
+        <option selected>Number of hours</option>
+        <option value="1">1 hour...........$9</option>
+        <option value="2">2 hours.......$13</option>
+        <option value="6">1/2 day........$16</option>
+        <option value="12">whole day...$20</option>
+      </select>
+      <div class="form-group pt-2">
+        <label for="cc" style="font-size:18px;"><i class="fa fa-credit-card" aria-hidden="true"
+            style="font-size: 15px;"></i>
+          Your credit card
+          number
+          <input id="cc" class="form-control" name="cc" type="text" required minlength="8" style="width:200px">
+        </label>
+      </div>
+      <div id="done"> 
+<button type="submit" class="btn btn-primary px-4 mt-3">Save</button>
+      </div>
+      
+    </div>
+    <div class="profilePic">
+      <img src={{profile}} alt="">
+    </div>
+  </form>
 </div>
+{{#if rents}}
+<h2 style="margin-left:20px;">Your previous reservations:</h2>
+<div class="container d-flex flex-wrap">
+  
+{{#each rents}}
+<div class="m-5">
+  <p class="mb-1">Pickup date: <b>{{this.pickupdate}}</b></p>
+  <p class="mb-1">Pickup time: {{this.pickuptime}}</p>
+  <p class="mb-1">Number of boards: {{this.boardnumber}}</p>
+  <p>Price you paid per board: {{this.amounthours}}</p>
+</div>
+{{/each}}
+</div>
+{{/if}}

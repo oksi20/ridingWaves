@@ -1,6 +1,12 @@
 const { Schema, model } = require('mongoose');
 
 const rentSchema = Schema({
+  name: {
+    type: String,
+  },
+  lastname: {
+    type: String,
+  },
   pickupdate: {
     type: Date,
   },
@@ -12,6 +18,11 @@ const rentSchema = Schema({
   amounthours: {
     type: String,
   },
-});
+  boardnumber: {
+    type: Number,
+  },
+  user: { type: Schema.Types.ObjectId, ref: 'User' },
+},
+{ timestamp: true });
 
 module.exports = model('Rent', rentSchema);
