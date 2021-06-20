@@ -21,11 +21,11 @@
 
 After clonning project, create .env file and add
 
-DB_URL=**your mongodb URI with username and password**
-SALT_ROUNDS=**hashing rounds**
-CLOUDINARY_CLOUD_NAME=**cloudinary data**
-CLOUDINARY_KEY=**cloudinary data**
-CLOUDINARY_SECRET=**cloudinary data**
+* DB_URL=**your mongodb URI with username and password**
+* SALT_ROUNDS=**hashing rounds**
+* CLOUDINARY_CLOUD_NAME=**cloudinary data**
+* CLOUDINARY_KEY=**cloudinary data**
+* CLOUDINARY_SECRET=**cloudinary data**
 
 then write
 
