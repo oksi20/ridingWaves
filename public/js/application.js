@@ -17,7 +17,7 @@ if (findoutWeather) {
         document.querySelector('.genWeather4 div').remove();
       }
 
-      const weatherLink = `http://api.worldweatheronline.com/premium/v1/marine.ashx?key=XXXX&format=json&tide=yes&q=${location}`;
+      const weatherLink = `http://api.worldweatheronline.com/premium/v1/marine.ashx?key=7cafe49a66a74420a3581021212606&format=json&tide=yes&q=${location}`;
       const respons = await fetch(weatherLink);
       const resul = await respons.json();
       const latLong = location.split(',');
