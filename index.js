@@ -57,3 +57,4 @@ app.listen(port, () => {
   console.log('Сервер запущен. Порт:', port);
   dbConnect();
 });
+// DB_URL=mongodb://localhost:27017/ridingWaves
